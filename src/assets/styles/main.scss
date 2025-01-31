@@ -1,0 +1,101 @@
+// Reset & Base styles
+@use 'variables' as *;
+@use 'sass:color';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: 1.5;
+  color: $text-primary;
+  background-color: $background-light;
+}
+
+// Grid system
+.container {
+  width: 100%;
+  padding-right: $spacing-3;
+  padding-left: $spacing-3;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$spacing-2;
+  margin-left: -$spacing-2;
+}
+
+.col {
+  flex: 1;
+  padding-right: $spacing-2;
+  padding-left: $spacing-2;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacing-3;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+// Utility classes
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mt-1 { margin-top: $spacing-1; }
+.mt-2 { margin-top: $spacing-2; }
+.mt-3 { margin-top: $spacing-3; }
+.mt-4 { margin-top: $spacing-4; }
+.mt-5 { margin-top: $spacing-5; }
+
+// Components
+.btn {
+  @include button-base;
+
+  &-primary {
+    background-color: $primary;
+    color: white;
+  }
+
+  &-secondary {
+    background-color: $secondary;
+    color: white;
+  }
+
+  &-danger {
+    background-color: $danger;
+    color: white;
+  }
+}
+
+.input {
+  @include input-base;
+}
+
+.card {
+  @include card-base;
+  margin-bottom: $spacing-3;
+
+  &-header {
+    padding: $spacing-3;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &-body {
+    padding: $spacing-3;
+  }
+
+  &-footer {
+    padding: $spacing-3;
+    border-top: 1px solid $border-color;
+  }
+}
