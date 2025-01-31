@@ -1,24 +1,48 @@
 # Vue 3 + TypeScript + Vite
 
-### 1. 패키지 설치 / 삭제
+### 1. 프로젝트 생성
 ```
-yarn install
+yarn create vite [proejct명] --template vue-ts
+```
 
-yarn install -D
+### 2. 의존성 설치
+```
+yarn
+```
+
+### 3. 의존성 설치 / 삭제
+```
+yarn add
+
+yarn add -D
 
 yarn remove
 ```
-### 2. 프로젝트 실행
+### 4. 개발 서버 실행
 ```
 yarn dev
 ```
 
-### 3. 프로젝트 빌드
+### 5. 프로젝트 빌드
 ```
 yarn build
 ```
 
-### 4. 폴더 설명
+### 6. 필수 패키지
+```
+axios pinia vue-router @vueuse/core
+-D typescript @types/node
+```
+
+### 7. eslint 설정
+```
+1) 의존성 추가
+2) .eslintrc.cjs, .eslintignore 작성
+3) package.json script 추가
+4) yarn lint 실행
+```
+
+### 8. 폴더 설명
 ```
 - assets: 정적 리소스 (스타일, 이미지 등)
 - components: 재사용 가능한 UI 컴포넌트
